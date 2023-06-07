@@ -542,11 +542,6 @@ hr {
 		background-color: var(--main-header-background);
 	}
 
-	.logo {
-		position: absolute;
-		top: 2px;
-		left: 30px;
-	}
 
 	.nav-show {
 		opacity: 1;
@@ -785,15 +780,15 @@ body {
 }
 
 .animated-icon img {
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	margin: 5px;
 	border-radius: 30px;
 	transition: all 0.3s ease;
 }
 
 img {
-	width: 60px;
+	width: 70px;
 	margin-top: 0;
 }
 
@@ -828,103 +823,6 @@ img {
 
 /*fin de efecto*/
 
-/*graficos de porcentaje*/
-.pie {
-	--w: 150px;
-	--p: 0;
-	--b: 10px;
-	--c: rgb(0, 0, 0);
-
-	width: var(--w);
-	aspect-ratio: 1;
-	position: relative;
-	display: inline-grid;
-	place-content: center;
-	margin: 5px;
-	font-size: 25px;
-	font-weight: bold;
-	font-family: sans-serif;
-}
-
-.pie:before {
-	content: "";
-	position: absolute;
-	border-radius: 50%;
-	inset: 0;
-	background: conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
-	-webkit-mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
-	mask: radial-gradient(farthest-side, #0000 calc(99% - var(--b)), #000 calc(100% - var(--b)));
-}
-
-#lista {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-}
-
-#contenedor-imagen {
-	display: flex;
-	justify-content: flex-end;
-}
-
-#contenedor-imagen img {
-	width: 100px;
-	height: auto;
-}
-
-#habilidades {
-	font-family: 'Rubik', sans-serif;
-	background-size: 200% 100%;
-	min-height: auto;
-	background-repeat: no-repeat;
-	animation: mov 30s infinite linear alternate;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-@media only screen and (max-width: 600px) {
-	#habilidades {
-		white-space: normal;
-	}
-}
-
-
-@keyframes mov {
-	from {
-		background-position: left;
-	}
-
-	to {
-		background-position: right;
-	}
-}
-
-.skill {
-	padding: 5px;
-	text-align: center;
-}
-
-.skill-name {
-	font-weight: bold;
-}
-
-.pie {
-	position: relative;
-	width: 100px;
-	height: 100px;
-	margin: 20px auto;
-	border-radius: 50%;
-	line-height: 100px;
-	font-size: 14px;
-	color: #fff;
-	text-align: center;
-}
 
 /*mis experiencias*/
 .knowledge {
@@ -1045,7 +943,41 @@ img {
 	}
 }
 
-/*animacion habilidades*/
+
+
+/* Estilos para el contenedor principal */
+.contener {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+/* Estilos para el contenido de habilidades */
+#habilidades {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-size: 200% 100%;
+	min-height: auto;
+	background-repeat: no-repeat;
+	animation: mov 30s infinite linear alternate;
+	width: 100%;
+	overflow: hidden;
+}
+
+/* Resto de los estilos */
+#habilidades .row {
+	margin: 0;
+}
+
+.skill {
+	padding: 30px;
+	text-align: center;
+}
+
 .skill-name {
 	position: relative;
 	display: inline-block;
@@ -1072,4 +1004,76 @@ img {
 .skill-name:hover img {
 	opacity: 0;
 	visibility: hidden;
+}
+
+.masinfo {
+	text-align: left;
+	background: rgba(12, 10, 10, 0.513);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	padding: 20px;
+}
+
+.center-icons {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.center-icons li {
+	margin: 0 10px;
+}
+
+/* Estilos para la sección de habilidades */
+.seccion {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 60px;
+	margin: 40px;
+}
+
+.seccion .row {
+	align-items: flex-end;
+	text-align: center;
+	margin: 0;
+}
+
+/* Estilos para la sección de información adicional */
+.masinfo {
+	text-align: left;
+	margin: 30px auto;
+	max-width: 800px;
+	background: rgba(12, 10, 10, 0.513);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	padding: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+	.contener {
+		padding: 1300px;
+	}
+
+	.masinfo {
+		max-width: 200%;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.masinfo {
+		padding: 40px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.masinfo {
+		margin: 10px;
+	}
 }
