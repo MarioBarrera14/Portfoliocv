@@ -27,7 +27,7 @@
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 	border-radius: 10px;
 	border: 1px solid rgba(255, 255, 255, 0.18);
-	margin-top: 2px;
+	margin-top: 50px;
 	/* Ajusta este valor según sea necesario */
 	margin-bottom: 2px;
 	/* Ajusta este valor según sea necesario */
@@ -43,6 +43,16 @@
 	background-size: cover;
 	background-position: center;
 	animation: mov 30s infinite linear alternate;
+}
+
+@keyframes mov {
+	from {
+		background-position: left;
+	}
+
+	to {
+		background-position: right;
+	}
 }
 
 
@@ -1012,7 +1022,7 @@ img {
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 	border-radius: 10px;
 	border: 1px solid rgba(255, 255, 255, 0.18);
-	padding: 20px;
+	padding: 0;
 }
 
 .center-icons {
