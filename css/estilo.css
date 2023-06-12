@@ -392,23 +392,20 @@ a.nav-link {
 	border-radius: 12px;
 	background: var(--main-decor-color);
 }
-
 .indi img {
 	width: 100%;
 	height: 70%;
-	border-radius: 10px 10px 0px 0px;
+	border-radius: 10px 10px 0 0;
+	object-fit: cover;
 }
 
 .indi .work-content {
 	text-align: center;
 	padding: 10px 5px;
-	font-size: 1rem;
+	font-size: 0.8rem;
 	color: var(--main-fonts-color);
 	font-family: var(--main-font-family);
 	cursor: pointer;
-}
-
-.indi a {
 	text-decoration: none;
 }
 
@@ -418,6 +415,10 @@ a.nav-link {
 
 .indi:hover {
 	box-shadow: 0 0 1.5rem gray;
+}
+
+.work-content {
+	text-align: center;
 }
 
 /*──────────────────
